@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
@@ -34,7 +35,7 @@ public class Report {
     private Integer id;
 
     @ManyToOne
-    @Column(name = "employee_id",nullable = false)
+    @JoinColumn(name = "employee_id",nullable = false)
     private Employee employee;
 
     @Column(name = "report_date",nullable = false)
